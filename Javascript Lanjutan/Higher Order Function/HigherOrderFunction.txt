@@ -1,0 +1,54 @@
+Higher Order Function
+=========================
+Definisi :
+Https://eloquentjavascript.net => Function yang beroperasi pada function yang lain, baik itu digunakan dalam argument, maupun sebagai return value
+
+Dalam Javascript itu sebuah Function disebut dengan "First Class Function" jadi inti dari Javascript itu adalah function
+
+https://sitepoint.com => Javascript memperlakukan function sebagai object
+
+Contoh :
+Function Declaration :
+function kerjakanTugas(matakuliah, selesai){
+    console.log(`Mulai mengerjakan tugas ${matakuliah} ... `);
+    selesai();
+}
+function selesai(){
+    alert('Selesai mengerjakan tugas!');
+}
+kerjakanTugas('Pemrograman Web', selesai);
+
+Noted: 
+1. Jika Punya function sebagai argument maka itu disebut dengan "Callback"
+2. sedangkan Function yang memiliki Callback sebagai argument itu disebut dengan "Higher Order Function"
+
+Contoh Lainnya:
+1. Penggunaan "setTimeout" = Higher Order Function
+setTimeout(function(){
+    console.log('Hello World');
+},1000);
+
+2. Penggunaannya pada DOM
+const tombol = document.querySelector('.submit');
+tombol.addEventListener('click', function(){
+    console.log('tombol ditekan!');
+});
+
+3. Sebuah Function yang "return value" nya adalah Function
+function ucapkanSalam(waktu){
+    return function(nama){
+        console.log(`Halo ${nama}, Selamat ${waktu}, Semoga Harimu Menyenangkan!`);
+    }
+};
+let selamatMalam = ucapkanSalam('Malam');
+console.dir(selamatMalam('Bobby'));
+
+Noted: "function ucapkanSalam(waktu) = Higher Order Function yang karena didalamnya memiliki "return value yang juga function"
+
+## Kenapa Harus Menggunaan "Higher Order Function"
+1. Abstraksi => untuk membuat agar code yang dibuat bisa lebih sederhana / simple
+
+## Contoh Higher Order Function
+1. array.prototype.map();
+2. array.prototype.filter();
+3. array.prototype.reduce();

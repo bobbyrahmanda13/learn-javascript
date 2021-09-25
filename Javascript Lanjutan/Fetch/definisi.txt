@@ -1,0 +1,55 @@
+Fetch adalah sebuah API pada Javascript Modern yang tugasnya mengambil data secara asyncronous / ajax sama seperti melakukan XMLHttpRequest pada vanilla javascript atau juga menggunakan method ajax pada jquery
+
+fetch() :
+merupakan Sebuah method pada API javascript untuk mengambil "resources" dari jaringan, mengembalikan "Promise" yang selesai("fullfilled") ketika ada "response" yang tersedia.
+
+link: developer mozilla 
+
+Syntax :
+fetch(resources,init)
+
+init = Configurasi tambahan
+
+resources:
+1. URL => alamat dari sumber yang kita akan ambil
+2. Request Object => representasi dari permintaan sumber
+
+init (optional)
+=> konfigurasi tambahan pada sebuah request berbentuk object
+beberapa diantaranya :
+1. method
+2. headers
+3. body
+4. mode 
+5. cache
+6. referrer
+7. referrerPolicy
+8. integrity
+9. keepalive
+10. signal
+
+// ! note => karena tadi tidak ada ini nya maka default dari "init" adalah method "GET" dan juga bisa menggunakan method lainnya seperti "POST" dan kawan2.
+
+response :
+hasil dari fetch, berupa promise
+
+response(property)
+1. headers
+2. ok
+3. redirected
+4. status
+5. statusText
+6. type
+7. URL
+8. body
+
+response(method)
+1. clone()
+2. error()
+3. redirect()
+4. blob()
+5. formData()
+6. json()
+7. text()
+
+//! note => rata-rata dari "method" response itu mengembalikan "Promise"

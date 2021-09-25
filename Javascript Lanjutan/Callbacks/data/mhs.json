@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "Bobby Rahmanda",
+    "nobp": "14101152630133",
+    "email": "bobbyrahmanda1996@gmail.com",
+    "jurusan": "Teknik Informatika",
+    "idAlumni": 1
+  },
+  {
+    "nama": "Richo Hardiansyah",
+    "nobp": "14101152630134",
+    "email": "richohardiansyah@gmail.com",
+    "jurusan": "Teknik Informatika",
+    "idAlumni": 2
+  },
+  {
+    "nama": "Lidya Syafina Putri",
+    "nobp": "14101152630135",
+    "email": "lidyasyafinaputri@gmail.com",
+    "jurusan": "Teknik Informatika",
+    "idAlumni": 3
+  }
+]

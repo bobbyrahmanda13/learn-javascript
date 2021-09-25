@@ -1,0 +1,70 @@
+Javascript
+================== 
+// Definisi Terbaru => is a "single-threaded", "non-blocking", "asynchronous" and "concurrent" language
+// link => http://latentflip.com
+=======================
+Single-threaded
+-----------------
+"thread" => Urutan eksekusi kode yang dapat dilakukan secara bebas / independent satu sama lain 
+contoh :
+thread 1 = task - 1 => task - 2 => task - 3 => task - n
+intinya => javascript membaca baris per baris dan menyelesaikannya
+
+Multi-threaded
+-----------------
+thread 1 = task 1              task 4
+thread 2 =       task 2
+thread 3 =              task 3
+intinya => Pekerjaannya hanya bisa dilakukan satu-satu tapi bisa saja dikerjakan oleh thread yang berbeda
+
+Blocking 
+-----------------
+ketika kita memiliki 1 buah task pada saat di eksekusi/jalankan ternyata task/script ini membutuhkan waktu yang lama, jika task 1 belum selesai maka tidak akan bisa lanjut ke task/script berikutnya
+
+Non-Bloking 
+-----------------
+ketika kita mengerjakan 1 task walaupun pekerjaannya belum selesai/membutuhkan waktu yang lama tapi dia bisa lanjut ke task/script berikutnya
+
+Syncronous 
+-----------------
+Sama seperti biasa
+task 1 => task 2 => task 3 => task 4 
+
+Asynchronous
+-----------------
+Single-threaded :
+==================
+task 1 => task 2 => task 1 => task 2 ...... task 1 => task 2
+mulai     mulai                             selesai   selesai
+
+Penjelasan: 
++) jika task/script ke 1 (mulai mengerjakan) => tetapi belum selesai
++) lalu thread-nya bisa pindah ke task yg lain (mulai mengerjakan) => belum selesai
++) lalu pindah lagi ke task ke 1, task ke 2, task ke selanjutnya, sampai task ke 1 selesai, dan task ke 2 selesai sampai task lainnya pun juga selesai
+
+Multi-threaded
+==================
+thread 1 = task 1
+thread 2 = task 2
+thread 3 = task 3 
+
+Penjelasan: jika menggunakan Asynchronous Multi-threaded maka thread 1 dan thread yang lain bisa mengerjakan task nya secara bersama2(Bareng2/sekaligus)
+
+Note:
+asynchronous + single-threaded = Concurrency
+asynchronous + Multi-threaded = Parallelism => mengerjakan secara bersamaan dalam waktu tertentu
+
+KESIMPULAN
+===============
+* Single vs Multi Thread  => lingkungan eksekusi task yang pengerjaan nya menggunakan "1 thread" atau "banyak thread"
+* Blocking vs Non-Blocking => Teknik "Ngoding" yang biasanya ada hubungan dengan input dan output (IO Related)
+* Syncronous vs Asynchronous => Teknik "Ngoding" yang ada hubungan nya dengan request kita terhadap HTTP (HTTP Request)
+* Concurrency vs Parallelism => lingkungan eksekusi "task"
+
+Mesin yang menjalankan Javascript itu disebut "V8 Engine"
+V8 => terdiri dari 2 bagian:
+1. Heap => digunakan untuk alokasi memory (memory allocation) digunakan juga untuk tempat penyimpanan "Variabel, function" ada juga hubungannya dengan "Hoisting"
+2. Stack => digunakan untuk pemanggilan function (Function Call) dan eksekusi script (Execution Context)
+
+Note:
+Function itu bisa menerima parameter berupa function lagi dan itu disebut callback
