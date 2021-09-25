@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  text-align: center;
+}
+
+/* tambahan class baru dengan JS */
+.biru-muda {
+  background-color: lightblue;
+}
+
+/* button */
+.button {
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+.button:hover {
+  background-color: white;
+  color: black;
+}
+/* slider */
+.kotak {
+  width: 25px;
+  height: 25px;
+  margin: 10px auto;
+}
+.merah {
+  background-color: red;
+}
+.hijau {
+  background-color: green;
+}
+.biru {
+  background-color: blue;
+}
